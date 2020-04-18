@@ -44,9 +44,11 @@ nav ul li ul {
     position: absolute;
     padding: 5px;
 }
-nav ul li :hover ul{
+
+nav ul li:hover ul{
     display: block;
 }
+
 nav ul li ul li a {
     padding: 12px 14px;
 }
