@@ -1,4 +1,1 @@
-let jsHotel = {
-    slogan = "Code All Night, Sleep All Day";
-    
-}
+document.getElementsByClassName("slogan")[0].innertext = "SLEEP FOREVER";
