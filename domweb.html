@@ -6,9 +6,6 @@
         h1 {
             color:crimson;
         }
-        .favorite {
-            font-style: italic;
-        }
         #food {
             color:brown
         }
@@ -19,10 +16,7 @@
             color: purple
         }
     </style>
-
-<script>
-    src="domweb.js"
- </script>
+<script src=domweb.js></script>
 
 </head> <!--closing head tag/element (tag and element are interchangeable-->
 <body>
@@ -38,5 +32,7 @@
     <p id = "activity">Coding</p>
     <p class= "favorite">My favorite thing to watch is:</p>
     <p id = "shows">Books lol</p>
-
+<script>
+    document.getElementById("food").innerText = "Seafood";
+</script>
 </body>

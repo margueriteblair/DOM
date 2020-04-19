@@ -36,7 +36,7 @@ nav ul li a {
     display: block;
     font-family: monospace;
     font-size: 14px;
-    padding: 22px 8px;
+    padding: 22px 10px;
     text-decoration: none;
 }
 nav ul li ul {
@@ -50,7 +50,7 @@ nav ul li:hover ul{
 }
 
 nav ul li ul li a {
-    padding: 12px 8px;
+    padding: 12px 10px;
 }
 nav ul li ul li a:hover {
     background-color: lightgray;

@@ -1,3 +1,1 @@
-document.getElementById("food").innertext = "Seafood";
-document.getElementById("activity").innerText = "Solving Algorithms";
-document.getElementById("shows").innertext = "Youtube";
+alert("Yo guys, welcome to my website!")
