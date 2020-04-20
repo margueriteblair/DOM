@@ -1,0 +1,26 @@
+table {
+    width: 400px;
+    /* border-spacing: px; */
+}
+
+th {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+
+}
+caption {
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: lightpink;
+}
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+}
