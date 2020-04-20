@@ -24,3 +24,13 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: dodgerblue;
 }
+
+button {
+    margin-top: 20px;
+    font-size: larger;
+    font-family: monospace;
+    padding: 1px;
+    color: white;
+    background-color: firebrick;
+    border-radius: 10%;
+}
