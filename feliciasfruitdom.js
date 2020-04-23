@@ -1,0 +1,1 @@
+document.getElementsByClassName("slogan").innerText = "Buy Felicia!"
