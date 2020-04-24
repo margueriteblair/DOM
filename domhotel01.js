@@ -1,5 +1,5 @@
 document.getElementById('hotelName').innerText = "The DOM Hotel";
-document.getElementById('slogan').innerText = "Our Customers are the OBJECTS of our desire (no creepy)";
+document.getElementById('slogan').innerText = "Our Customers are the OBJECTS of our desire (not creepy)";
 
 let domHotel = {
     availableRooms: [ [101, 102, 103, 104], [201], [], [401, 402] ],
