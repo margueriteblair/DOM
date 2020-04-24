@@ -6,8 +6,9 @@ let domhotel = {
      bookedRooms: [[],[],[],[]],
      roomTypes: ["Single", "Double", "Queen", "King"],
 
-     bookRoom: function() {
-
+     bookRoom: function(roomNum) {
+         this.bookedRooms[(roomNum[0]-1)].push(roomNum);
+         this.availableRooms[(roomNum[0]-1)].splice(this.availableRooms.indexOf(roomNum),1);
      },
 
      updateTheInventoryList: function() {
@@ -23,4 +24,6 @@ let domhotel = {
 
 }
 
+
+domhotel.bookRoom("201");
 domhotel.updateTheInventoryList();
