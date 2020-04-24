@@ -1,16 +1,29 @@
-document.getElementById("slogan").innerText = "NO NO NO NO";
-document.getElementById("hotelName").innerText = "THE DOM HOTEL BABAAAAAY";
+document.getElementById('hotelName').innerText = "The DOM Hotel";
+document.getElementById('slogan').innerText = "Our Customers are the OBJECTS of our desire (no creepy)";
 
-let availableRooms = [101, 102, 103, 104];
+let domHotel = {
+    availableRooms: [ [101, 102, 103, 104], [201], [], [401, 402] ],
+    bookedRooms: [[],[],[],[]],
+    roomTypes: ["Single", "Double", "Queen", "King"],
 
-// let linesOfHtml = "<select> <option value = '701'>701</option></select> ";
-
-let linesOfHtml = "<select>";
-for (let i = 0; i < availableRooms.length; i ++) {
-    linesOfHtml = linesOfHtml + `<option value = "${availableRooms[i]}">${availableRooms[i]}</option>`;
+    bookRoom: function() {
+        this.bookedRooms[0].push(this.availableRooms[0].pop());
+        this.updateAvailableRoomsInDom();
+    },
+    updateAvailableRoomsInDom: function() {
+        let linesOfHtml = "<select>";
+        for (let i = 0; i < this.availableRooms.length; i++) {
+        for (let j = 0; j < this.availableRooms[i].length; j++) {
+        linesOfHtml = linesOfHtml + `<option value='${this.availableRooms[i][j]}'>${this.availableRooms[i][j]}</option>`;
+     
+    }
 }
-linesOfHtml = linesOfHtml + "</select>";
+        linesOfHtml = linesOfHtml + "</select>";
+        document.getElementById('AvailRoomList').innerHTML = linesOfHtml;
 
-console.log(linesOfHtml);
-document.getElementById("AvailRoomList").innerHTML = linesOfHtml;
+    }
+}
 
+domHotel.updateAvailableRoomsInDom();
+domHotel.bookRoom();
+// console.log(domHotel.bookedRooms);

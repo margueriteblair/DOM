@@ -1,0 +1,18 @@
+#amenities {
+    position: relative;
+    bottom: 35px;
+    left: 100px;
+}
+
+#title {
+    padding-top: 0px;
+    font-family: monospace;
+}
+
+#slogan {
+    font-family: monospace;
+}
+
+#headers {
+    background-color: skyblue;
+}
