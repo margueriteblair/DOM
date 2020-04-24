@@ -26,4 +26,3 @@ let domHotel = {
 
 domHotel.updateAvailableRoomsInDom();
 domHotel.bookRoom();
-// console.log(domHotel.bookedRooms);
