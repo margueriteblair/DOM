@@ -9,6 +9,13 @@ let domhotel = {
      bookRoom: function(roomNum) {
          this.bookedRooms[(roomNum[0]-1)].push(roomNum);
          this.availableRooms[(roomNum[0]-1)].splice(this.availableRooms.indexOf(roomNum),1);
+         this.updateTheInventoryList();
+     },
+
+     outBook: function(roomNum) {
+         this.bookedRooms[(roomNum[0]-1)].splice(this.bookedRooms.indexOf(roomNum),1);
+         this.availableRooms[(roomNum[0]-1)].push(roomNum)
+         this.updateTheInventoryList();
      },
 
      updateTheInventoryList: function() {
@@ -24,6 +31,10 @@ let domhotel = {
 
 }
 
-
-domhotel.bookRoom("201");
 domhotel.updateTheInventoryList();
+domhotel.bookRoom("201");
+domhotel.bookRoom("101");
+domhotel.outBook("201");
+domhotel.outBook("101");
+domhotel.bookRoom("304");
+
