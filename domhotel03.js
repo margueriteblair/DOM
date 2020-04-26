@@ -7,15 +7,19 @@ let domhotel = {
      roomTypes: ["Single", "Double", "Queen", "King"],
 
      bookRoom: function(roomNum) {
+        if (this.availableRooms[(roomNum[0]-1)].includes(roomNum)) {
          this.bookedRooms[(roomNum[0]-1)].push(roomNum);
          this.availableRooms[(roomNum[0]-1)].splice(this.availableRooms.indexOf(roomNum),1);
          this.updateTheInventoryList();
+        } else alert(`ERROR: INVALID ROOM ${roomNum}`);
      },
 
      outBook: function(roomNum) {
+        if (this.bookedRooms[(roomNum[0]-1)].includes(roomNum)) {
          this.bookedRooms[(roomNum[0]-1)].splice(this.bookedRooms.indexOf(roomNum),1);
          this.availableRooms[(roomNum[0]-1)].push(roomNum)
          this.updateTheInventoryList();
+        } else alert(`ERROR: INVALID ROOM ${roomNum}`);
      },
 
      updateTheInventoryList: function() {
@@ -37,4 +41,4 @@ domhotel.bookRoom("101");
 domhotel.outBook("201");
 domhotel.outBook("101");
 domhotel.bookRoom("304");
-
+domhotel.bookRoom("444")
