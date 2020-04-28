@@ -42,3 +42,4 @@ domhotel.outBook("201");
 domhotel.outBook("101");
 domhotel.bookRoom("304");
 domhotel.bookRoom("444")
+
