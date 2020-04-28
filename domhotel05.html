@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+<h1>Welcome to the JS Hotel!</h1>
+<h2>We Cry a Lot Here</h2>
+
+
+<div id = "chosen"></div>
+    <select id = "roomsAvailable" onchange="getValue()">
+        <option value = "101">101</option>
+        <option value = "102">102</option>
+        <option value = "103">103</option>
+        <option value = "104">104</option>
+    </select>
+
+    <script>
+        function getValue() {
+            let room = document.getElementById("roomsAvailable");
+            let chosen = document.getElementById("chosen");
+
+            chosen.innerText = room.value;
+        }
+    </script>
+</body>
