@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 
 <head>
-
+<title>JS Hotel</title>
 </head>
 
 <body>
-<h1>Welcome to the JS Hotel!</h1>
-<h2>We Cry a Lot Here</h2>
 
+<h1 id = "name">oh my fucking god jesus christ</h1>
+ <h2 id = "slogan">fuck fuck fuck i </h2>
 
-<div id = "chosen"></div>
-    <select id = "roomsAvailable" onchange="getValue()">
+<p>Rooms Available:</p>
+<div id = "dropdown"></div>
+<div id = "bookroom"></div>
+    <!-- <select id = "roomsAvailable" onchange="getValue()">
         <option value = "101">101</option>
         <option value = "102">102</option>
         <option value = "103">103</option>
         <option value = "104">104</option>
-    </select>
+    </select> -->
 
-    <script>
-        function getValue() {
-            let room = document.getElementById("roomsAvailable");
-            let chosen = document.getElementById("chosen");
+<script src="domhotel05.js"></script>
+        <!-- // function getValue() {
+        //     let room = document.getElementById("roomsAvailable");
+        //     let chosen = document.getElementById("chosen");
 
-            chosen.innerText = room.value;
-        }
-    </script>
+        //     chosen.innerText = room.value;
+        // } -->
 </body>

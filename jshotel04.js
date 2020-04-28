@@ -23,10 +23,11 @@ let domhotel = {
             this.updateRoomInventory();
             this.updateRoomInventory2();
             this.unbookRoomButton();
+            this.bookRoomButton();
     },
     
     updateRoomInventory: function() {
-        dropDown = `<select onchange = "roomNum = this.options[this.selectedIndex].value">`
+        dropDown = `<select onChange = "roomNum=this.options[this.selectedIndex].value">`
         for (let i = 0; i < this.availableRooms.length; i++) {
             for (let j = 0; j < this.availableRooms[i].length; j++) {
                 dropDown = dropDown + `<option value = "${this.availableRooms[i][j]}">${this.availableRooms[i][j]}</option>`
@@ -36,7 +37,7 @@ let domhotel = {
         document.getElementById("dropdown").innerHTML = dropDown;
 },
     updateRoomInventory2: function() {
-        dropDown2 = `<select onchange = "roomNum = this.options[this.selectedIndex].value">`
+        dropDown2 = `<select onChange ="roomNum=this.options[this.selectedIndex].value">`
         for (let i = 0; i < this.bookedRooms.length; i++){
             for (let j = 0; j < this.bookedRooms[i].length; j++) {
                 dropDown2 = dropDown2 + `<option value = "${this.bookedRooms[i][j]}">${this.bookedRooms[i][j]}</option>`
@@ -47,12 +48,12 @@ let domhotel = {
     },
 
     bookRoomButton: function() {
-        button1 = `<button onclick="bookRoom()">Check In</button>`
+        button1 = `<button onclick="this.bookRoom()">Check In</button>`
         document.getElementById("bookroom").innerHTML = button1;
     },
 
     unbookRoomButton: function() {
-        button2 = `<button onclick="unbookRoom()">Check Out</button>`
+        button2 = `<button onclick="this.unbookRoom()">Check Out</button>`
         document.getElementById("unbook").innerHTML = button2;
     }
 
@@ -61,5 +62,6 @@ let domhotel = {
 domhotel.bookRoom(101);
 domhotel.bookRoom(102);
 domhotel.bookRoom(103);
+domhotel.bookRoom(202);
 
 //<button onclick="displayDate()">Try it</button>
