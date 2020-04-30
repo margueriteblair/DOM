@@ -39,7 +39,7 @@ let hotel = {
             for (let j = 0; j < this.bookedRooms[i].length; j++) {
                 if (selectedUnavailableRoom == this.bookedRooms[i][j]) {
                     console.log(typeof(selectedUnavailableRoom));
-                    this.bookedRooms[i].splice(this.bookedRooms[i].indexOf(selectedUnavailableRoom),1);
+                    this.bookedRooms[i].splice(this.bookedRooms[i].indexOf(this.bookedRooms[i][j]),1);
                     this.availableRooms[i].push(this.bookedRooms[i][j]);
                 }
             }
