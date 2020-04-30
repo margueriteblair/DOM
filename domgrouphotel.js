@@ -18,10 +18,10 @@ let hotel = {
         for (let i = 0; i < this.availableRooms.length; i++) {
             for (let j= 0; j < this.availableRooms[i].length; j++) {
                 if (selectedAvailableRoom == this.availableRooms[i][j]) {
-                    console.log(typeof(selectedAvailableRoom));
-                    console.log(typeof(this.availableRooms[i][j]));
-                    console.log(selectedAvailableRoom);
-                    console.log(this.availableRooms[i][j]);
+                    // console.log(typeof(selectedAvailableRoom));
+                    // console.log(typeof(this.availableRooms[i][j]));
+                    // console.log(selectedAvailableRoom);
+                    // console.log(this.availableRooms[i][j]);
                     this.bookedRooms[i].push(this.availableRooms[i].splice(this.availableRooms[i].indexOf(selectedAvailableRoom),1))
                     // this.bookedRooms[i].push(this.availableRooms[i][j]);
                    
@@ -38,7 +38,7 @@ let hotel = {
         for (let i = 0; i < this.bookedRooms.length; i++) {
             for (let j = 0; j < this.bookedRooms[i].length; j++) {
                 if (selectedUnavailableRoom == this.bookedRooms[i][j]) {
-                    console.log(typeof(selectedUnavailableRoom));
+                    // console.log(typeof(selectedUnavailableRoom));
                     this.bookedRooms[i].splice(this.bookedRooms[i].indexOf(this.bookedRooms[i][j]),1);
                     this.availableRooms[i].push(selectedUnavailableRoom);
                 }
@@ -75,3 +75,5 @@ hotel.updateAvailableRooms();
 hotel.updateBookedRooms();
 hotel.completeBookedRoomsArrays();
 console.log(document.getElementById("dropDownAvailable").innerText)
+localStorage.setItem("Selected Room", hotel.bookSelectedRoom.selectedAvailableRoom);
+localStorage.setItem("Unselected Room", hotel.unbookSelectedRoom.selectedUnavailableRoom);
