@@ -75,5 +75,5 @@ hotel.updateAvailableRooms();
 hotel.updateBookedRooms();
 hotel.completeBookedRoomsArrays();
 console.log(document.getElementById("dropDownAvailable").innerText)
-localStorage.setItem("Selected Room", hotel.bookSelectedRoom.selectedAvailableRoom);
-localStorage.setItem("Unselected Room", hotel.unbookSelectedRoom.selectedUnavailableRoom);
+// localStorage.setItem("Selected Room", hotel.bookSelectedRoom.selectedAvailableRoom);
+// localStorage.setItem("Unselected Room", hotel.unbookSelectedRoom.selectedUnavailableRoom);
